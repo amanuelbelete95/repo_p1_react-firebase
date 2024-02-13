@@ -14,7 +14,7 @@ function NavBar() {
               <a href='/about'>About</a>
             </li>
             <li>
-              <a href='/contacts'>Contacts</a>
+              <a href='/contacts'>News && Annoncement</a>
             </li>
           </ul>
         </nav>

@@ -1,13 +1,13 @@
 export const accordionData = [
   {
     id: 1,
-    question: 'What are the cleaning responsibilities of the office staff?',
+    question: 'What are responsibilities of Cleaning Management Office?',
     answer:
-      'The office staff is responsible for maintaining cleanliness in their work areas, including keeping desks tidy, disposing of trash properly, and cleaning up spills or messes.',
+      'The office staff is responsible for creating awareness on solid waste management,  in their work areas, including keeping desks tidy, disposing of trash properly, and cleaning up spills or messes.',
   },
   {
     id: 2,
-    question: 'How often is the office cleaned?',
+    question: 'How often is the Office Management Team Is Available?',
     answer:
       'The office is cleaned daily after working hours. Additionally, thorough cleaning is performed by professional cleaners twice a week.',
   },
