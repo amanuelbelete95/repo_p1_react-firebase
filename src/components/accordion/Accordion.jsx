@@ -19,15 +19,6 @@ function Accordion() {
 
   const handleEnablingMultiple = () => {
     setEnableMultiple(!enablemultiple);
-
-    // Generate the hexcolor
-    const letters = '0123456789ABCDEF';
-    let hexColor = '#';
-    for (let i = 0; i < 6; i++) {
-      hexColor += letters[Math.floor(Math.random() * 16)];
-    }
-
-    setColor(hexColor);
   };
 
   const handleMultipleSelection = (id) => {
@@ -41,14 +32,6 @@ function Accordion() {
   };
 
   const handleRGBColor = (getCurrentId) => {
-    // // This function update the background color of the accordion question on the click of
-
-    // const r = Math.round(Math.random() * 256);
-    // const g = Math.round(Math.random() * 256);
-    // const b = Math.round(Math.random() * 256);
-    // const generatedRgb = `rgb(${r},${g},${b})`;
-
-    // setRgb(generatedRgb);
     getCurrentId === selected ? setSelected(null) : setSelected(getCurrentId);
   };
 
@@ -75,7 +58,14 @@ function Accordion() {
                     }}>
                     {item.question}
                   </h1>
-                  <span onClick={() => handleRGBColor(item.id)}>+</span>
+                  <span
+                    onClick={() => {
+                      enablemultiple
+                        ? handleMultipleSelection(item.id)
+                        : handleSingleSelection(item.id);
+                    }}>
+                    +
+                  </span>
                 </div>
 
                 {selected === item.id ? (
