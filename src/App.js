@@ -1,13 +1,10 @@
-// import NavBar from './components/navbar';
-// import Accordion from './components/accordion/Accordion';
-
-import ImageSlider from './components/images/ImageSlider';
 import './App.css';
+import NavBar from './components/navbar/NavBar';
 
 function App() {
   return (
     <div className='App'>
-      <ImageSlider />
+      <NavBar />
     </div>
   );
 }

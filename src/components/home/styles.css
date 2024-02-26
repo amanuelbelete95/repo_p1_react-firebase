@@ -52,7 +52,7 @@ button {
   font-size: 20px;
 }
 
-span {
+.accordion-span {
   border: 1px solid gray;
   border-radius: 2px;
   color: #b3b2b2;

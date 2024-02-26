@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs';
 import { imagesData } from './imagesData';
 import './images.css';
-function ImageSlider() {
+function Works() {
   const [images, setImages] = useState([]);
 
   const [currentSlide, setCurrentSlide] = useState(1);
@@ -66,4 +66,4 @@ function ImageSlider() {
   );
 }
 
-export default ImageSlider;
+export default Works;

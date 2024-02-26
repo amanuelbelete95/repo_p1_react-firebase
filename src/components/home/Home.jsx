@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './styles.css';
 import { accordionData } from './data';
 
-function Accordion() {
+function Home() {
   const [selected, setSelected] = useState(null);
   const [enablemultiple, setEnableMultiple] = useState(false);
   const [multiple, setMultiple] = useState([]);
@@ -52,6 +52,7 @@ function Accordion() {
                     {item.question}
                   </h1>
                   <span
+                    className='accordion-span'
                     onClick={() => {
                       enablemultiple
                         ? handleMultipleSelection(item.id)
@@ -76,4 +77,4 @@ function Accordion() {
   );
 }
 
-export default Accordion;
+export default Home;
