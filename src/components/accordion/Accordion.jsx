@@ -7,12 +7,6 @@ function Accordion() {
   const [enablemultiple, setEnableMultiple] = useState(false);
   const [multiple, setMultiple] = useState([]);
 
-  // Setting the color type and the color value to the background color
-
-  const [color, setColor] = useState('#614101');
-
-  const [rgb, setRgb] = useState('rgb(0, 255,255');
-
   const handleSingleSelection = (getCurrentId) => {
     getCurrentId === selected ? setSelected(null) : setSelected(getCurrentId);
   };
@@ -25,14 +19,13 @@ function Accordion() {
     const copyMultiple = [...multiple];
     const findIndexOfCurrentId = copyMultiple.indexOf(id);
 
-    if (findIndexOfCurrentId == -1) copyMultiple.push(id);
-    else copyMultiple.splice(findIndexOfCurrentId, 1);
+    if (findIndexOfCurrentId === -1) {
+      copyMultiple.push(id);
+    } else {
+      copyMultiple.splice(findIndexOfCurrentId, 1);
+    }
 
     setMultiple(copyMultiple);
-  };
-
-  const handleRGBColor = (getCurrentId) => {
-    getCurrentId === selected ? setSelected(null) : setSelected(getCurrentId);
   };
 
   return (
@@ -45,11 +38,11 @@ function Accordion() {
           ? accordionData.map((item, index) => (
               <div
                 className='item'
-                style={{ backgroundColor: color }}
+                style={{ backgroundColor: '#614101' }}
                 key={index}>
                 <div
                   className='title'
-                  style={{ backgroundColor: rgb }}>
+                  style={{ backgroundColor: 'rgb(0, 255,255' }}>
                   <h1
                     onClick={() => {
                       enablemultiple
