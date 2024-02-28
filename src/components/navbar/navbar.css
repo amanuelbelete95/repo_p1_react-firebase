@@ -1,7 +1,3 @@
-.allContainer {
-  position: relative;
-}
-
 .mainHeader {
   position: fixed;
   top: 0;
@@ -16,13 +12,11 @@
 }
 .links {
   display: flex;
-  color: #fff;
   gap: 20px;
   list-style-type: none;
 }
+
 .links a {
+  font-size: 25px;
   color: #fff;
-  font-size: xx-large;
-  list-style-type: none;
-  text-decoration: none;
 }

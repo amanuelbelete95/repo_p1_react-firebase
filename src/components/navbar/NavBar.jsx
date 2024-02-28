@@ -1,41 +1,47 @@
-import Works from '../works/Works';
-import Home from '../home/Home';
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './navbar.css';
-import { Link, Route, Routes } from 'react-router-dom';
 
 function NavBar() {
+  const navLinkStyle = ({ isActive }) => {
+    return {
+      fontWeight: isActive ? 'bold' : 'normal',
+      textDecoration: isActive ? 'none' : 'underline',
+      color: isActive ? 'white' : 'blue',
+    };
+  };
   return (
     <>
       <header className='mainHeader'>
-        <h1>[CMA]💤</h1>
+        <h1>[CMA-Sanitation]💤</h1>
 
         {/* navigation */}
         <nav>
           <ul className='links'>
             <li>
-              <Link to='/'>Home</Link>
+              <NavLink
+                style={navLinkStyle}
+                to='/'>
+                Home
+              </NavLink>
             </li>
             <li>
-              <Link to='/works'>Works</Link>
+              <NavLink
+                style={navLinkStyle}
+                to='/works'>
+                Works
+              </NavLink>
             </li>
-            {/* <li>
-              <a to='/contacts'>Contacts</a>
-            </li> */}
+            <li>
+              <NavLink
+                style={navLinkStyle}
+                to='/contacts'>
+                Contacts
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </header>
-      <Routes>
-        <Route
-          path=''
-          element={<Home />}></Route>
-        <Route
-          path='/works'
-          element={<Works />}></Route>
-        {/* <Route
-            path='/contacts'
-            element={<Contacts />}></Route> */}
-      </Routes>
     </>
   );
 }

@@ -35,7 +35,7 @@ function Works() {
         ? images.map((image) => (
             <img
               key={image.id}
-              alt={`image-${image.id}`}
+              alt={`sanity-${image.id}`}
               src={image.download_url}
               className='current-image'
               style={{ display: image.id === currentSlide ? 'block' : 'none' }}

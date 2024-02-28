@@ -1,5 +1,5 @@
 .App {
   display: flex;
   margin: 200px auto;
-  border: 2px solid green;
+  justify-content: space-between;
 }
