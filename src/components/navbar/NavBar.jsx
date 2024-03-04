@@ -6,7 +6,6 @@ function NavBar() {
   const navLinkStyle = ({ isActive }) => {
     return {
       fontWeight: isActive ? 'bold' : 'normal',
-      textDecoration: isActive ? 'none' : 'underline',
       color: isActive ? 'white' : 'blue',
     };
   };
@@ -30,6 +29,14 @@ function NavBar() {
                 style={navLinkStyle}
                 to='/works'>
                 Works
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
+                style={navLinkStyle}
+                to='/teams'>
+                Teams
               </NavLink>
             </li>
             <li>

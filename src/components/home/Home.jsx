@@ -30,6 +30,14 @@ function Home() {
 
   return (
     <div className='wrapper'>
+      <h1 className='text-2xl bg-gray-500 p-5'>
+        Solid Waste Management Services
+      </h1>
+
+      <p className='text-2xl bg-slate-50'>
+        Check out the below questions and get answers about solid waste
+        management service!
+      </p>
       <button onClick={handleEnablingMultiple}>
         Enable Multiple Selection
       </button>
