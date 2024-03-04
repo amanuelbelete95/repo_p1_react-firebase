@@ -1,23 +1,70 @@
-import logo from './logo.svg';
+import Home from './components/home/Home';
+import Works from './components/works/Works';
+import Contacts from './components/contacts/Contacts';
+import Teams from './components/teams/Teams';
+import RecyclingTeam from './components/teams/recycling-team/RecyclingTeam';
+import AwarennesTeam from './components/teams/awareness-team/AwarenessTeam';
+import DisposalTeam from './components/teams/disposal-team/DisposalTeam';
+
+import RequestConformation from './components/confirm-request/RequestConformation';
+import NoMatch from './components/nomatch/NoMatch';
+import { Route, Routes } from 'react-router-dom';
+import NavBar from './components/navbar/NavBar';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <NavBar />
+
+      <>
+        <Routes>
+          <Route
+            path='/'
+            element={<Home />}
+          />
+          <Route
+            path='works'
+            element={<Works />}
+          />
+          <Route
+            path='contacts'
+            element={<Contacts />}
+          />
+
+          <Route
+            path='teams'
+            element={<Teams />}>
+            <Route
+              index
+              element={<RecyclingTeam />}
+            />
+            <Route
+              path='recycling-team'
+              element={<RecyclingTeam />}
+            />
+            <Route
+              path='awareness-team'
+              element={<AwarennesTeam />}
+            />
+            <Route
+              path='disposal-team'
+              element={<DisposalTeam />}
+            />
+          </Route>
+
+          <Route
+            path='/request-conformation'
+            element={<RequestConformation />}
+          />
+
+          <Route
+            path='*'
+            element={<NoMatch />}
+          />
+        </Routes>
+      </>
     </div>
   );
 }
